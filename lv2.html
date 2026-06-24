@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //e6
+        let x = Math.floor(Math.random() * 10);
+        switch(x){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                console.log(`Negative`);
+            case 4:
+            case 5:
+            case 6:
+                console.log(`Medium`);
+            case 7:
+            case 8:
+            case 9:
+                console.log(`Positive`);
+        }
+        //e7
+        let n = Math.floor(Math.random() * 10);
+        if(n%2 == 0){
+            console.log(`Even`);
+        }
+        else{
+            console.log(`Odd`);
+        }
+        //e8
+        let n1 = Math.floor(Math.random() * 10);
+        let n2 = Math.floor(Math.random() * 10);
+        let n3 = Math.floor(Math.random() * 10);
+        let m = Math.max(n1,n2,n3);
+        console.log(`max ` + m);
+        //e9
+        let grade = Math.floor(Math.random() * 101);
+        switch(grade){
+            case 90 <= grade <= 100:
+                console.log(`A`);
+            case 80 <= grade <= 89:
+                console.log(`B`);
+            case 70 <= grade <= 79:
+                console.log(`C`);
+            case 60 <= grade <= 69:
+                console.log(`D`);
+            default:
+                console.log(`F`);
+        }
+        //e10
+        let year = 2026;
+        if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
+            console.log(`Leap Year`);
+        }
+        else{
+            console.log(`No leap year`);
+        }
+
+    </script>
+</body>
+</html>

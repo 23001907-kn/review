@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //e24
+        function find(arr){
+            let max = 0;
+            let min = 9999;
+            for(let i = 0 ; i < arr.length; i++){
+                max = Math.max(max, arr[i]);
+                min = Math.min(min, arr[i]);
+            }
+            return [min, max];
+        }
+        console.log(find([1,2,3,4,5]));
+        //e28
+        function filter(arr){
+            let num = [];
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] > 10){
+                    num.push(arr[i]);
+                }
+            }
+            return num;
+        }
+        console.log(filter([14,21,9,42,70]));
+        //e29
+        let arr = [1,1,2,2,3,3,4];
+        let s = new Set(arr);
+        let num = [];
+        for(let x of s){
+            num.push(x);
+        }
+        console.log(num);
+        //e30
+        function find_max2(nums){
+            nums = nums.sort();
+            return nums[nums.length-2];
+        }
+        console.log(find_max2([5, 2, 9, 1, 7]));
+    </script>
+</body>
+</html>

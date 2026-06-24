@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //e46
+        let arr = [1,2,3,4,5];
+        let doubled = arr.map(x => x * 2);
+        console.log(doubled);
+        //e47
+        const students = [
+            { id: 1, name: "Alice", score: 85 },
+            { id: 2, name: "Bob", score: 70 },
+            { id: 3, name: "Charlie", score: 95 }
+        ];
+        let scores = students.map(x => x.score);
+        console.log(scores);
+        //e48
+        let newArr = arr.filter(x => x%2===0);
+        console.log(newArr);
+        //e49
+        let users = [
+            { id: 1, name: "David", active: true },
+            { id: 2, name: "Anna", active: false },
+            { id: 3, name: "John", active: true }
+        ];
+        let activeUser = users.filter(x => x.active);
+        console.log(activeUser);
+        //e50
+        let user = users.find(x => x.id = 2);
+        console.log(user);
+        //e51
+        let mang = [1,-2,3,4,-3,6,5,-9];
+        let kt = mang.some(x => x < 0);
+        console.log(kt);
+        //e52
+        let check = mang.every(x => x > 0);
+        console.log(check);
+        //e53
+        let sum_score = students.reduce((sum, student) => {
+            return sum + student.score
+        }, 0);
+        console.log(sum_score);
+        //e54
+        let max_score = students.reduce((max, student) => {
+            return Math.max(max, student.score)
+        }, 0);
+        console.log(max_score);
+    </script>
+</body>
+</html>

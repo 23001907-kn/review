@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //e36
+        const students = [
+            { id: 1, name: "Alice", score: 85 },
+            { id: 2, name: "Bob", score: 70 },
+            { id: 3, name: "Charlie", score: 95 }
+        ];
+        for (let student of students){
+            console.log(student.name);
+        }
+        //e37
+        for(let student of students){
+            if(student.id == 2){
+                console.log(student);
+            }
+        }
+        //e38
+        const res = [];
+        for(let student of students){
+            if(student.score >= 80){
+                res.push(student);
+            }
+        }
+        console.log(res);
+        //e39
+        let average = 0;
+        for(let student of students){
+            average += student.score;
+        }
+        console.log(Math.floor(average / students.length));
+        //e40
+        let max_score = 0;
+        let stu = null;
+        for(let student of students){
+            if(max_score < student.score){
+                max_score = student.score;
+                stu = student;
+            }
+        }
+        console.log(stu);
+    </script>
+</body>
+</html>
