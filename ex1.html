@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+            body{
+                margin:0;
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#e5e5e5;
+                font-family:Arial,sans-serif;
+            }
+
+            .container{
+                width:700px;
+                height:400px;
+                display:flex;
+                background:white;
+                box-shadow:0 0 20px rgba(0,0,0,.1);
+            }
+
+            .left-panel{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                padding:40px;
+            }
+
+            .right-panel{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                text-align:center;
+
+                background:linear-gradient(
+                    135deg,
+                    #39d98a,
+                    #00b37a
+                );
+
+                color:white;
+            }
+            input{
+                width:80%;
+                padding:15px;
+                margin:10px 0;
+                border:none;
+                background:#f2f2f2;
+                border-radius:5px;
+            }
+            button{
+                width:90%;
+                padding:15px;
+                border:none;
+                background:#0e9f6e;
+                color:white;
+                border-radius:5px;
+                cursor:pointer;
+            }
+            .social-icons{
+                display:flex;
+                gap:15px;
+                margin-top:20px;
+            }
+
+            .icon{
+                width:40px;
+                height:40px;
+                border-radius:50%;
+
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+                color:white;
+                font-weight:bold;
+                cursor:pointer;
+            }
+
+            /* Facebook */
+            .facebook{
+                background:#1877f2;
+            }
+
+            /* Google */
+            .google{
+                background:#db4437;
+            }
+
+            /* LinkedIn */
+            .linkedin{
+                background:#0a66c2;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Signin</h1>
+
+            <input type="text" id="taikhoan" placeholder="ByteWebster">
+            <input type="text" id="matkhau" placeholder="........">
+
+            <button onclick="login()">Signin</button>
+
+            <p class="error" id="error"></p>
+            <p>or signin with</p>
+            <div class="social-icons">
+                <div class="icon facebook">f</div>
+                <div class="icon google">G</div>
+                <div class="icon linkedin">in</div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2>Welcome back!</h2>
+            <p>
+                Welcome back!...
+            </p>
+            <button class="signup-btn">
+                No account yet? Signup.
+            </button>
+        </div>
+    </div>
+    <script>
+    function login() {
+        let tk = document.getElementById("taikhoan").value;
+        let mk = document.getElementById("matkhau").value;
+        let error = document.getElementById("error");
+
+        if (email === "" || password === "") {//khong cho submit neu bo trong
+            error.innerText = "Please fill all fields!";
+            return;
+        }
+
+        if (password.length < 6) { //pw toi thieu 6 ky tu
+            error.innerText = "Password must be at least 6 characters!";
+            return;
+        }
+
+        error.innerText = "";
+        alert("Login successful!");
+    }
+    </script>
+</body>
+</html>
