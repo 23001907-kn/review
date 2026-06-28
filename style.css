@@ -337,6 +337,41 @@ body{
     width: 80px;
     gap: 20px;
 }
+.footer{
+    font-family: "Poppins", sans-serif;
+    background-color: #C0111A;
+    color:#ccc;
+    padding: 60px 0 24px;
+    width: 100%;
+    font-size: 12px;
+}
+.footer img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+.footer_grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+.footer_bottom{
+    margin-top: 40px;
+    padding-top: 16px;
+    font-size: 12px;
+}
+.footer h4 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.footer span{
+    display: block;
+}
+.f1 span{
+    margin-top: 50px;
+}
+
+
 
 
 
